@@ -1,0 +1,33 @@
+repos:
+-   repo: git://github.com/pre-commit/pre-commit-hooks
+    rev: v2.1.0
+    hooks:
+    -   id: check-json
+    -   id: check-yaml
+    -   id: debug-statements
+    -   id: detect-aws-credentials
+    -   id: end-of-file-fixer
+        exclude: ^docs/.*$
+    -   id: trailing-whitespace
+        exclude: README.md
+    -   id: pretty-format-json
+        args:
+        - --autofix
+    -   id: flake8
+-   repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.11.0
+    hooks:
+    - id: terraform_fmt
+    - id: terraform_docs
+    - id: terraform_validate_with_variables
+- repo: https://github.com/ansible/ansible-lint.git
+  rev: v4.1.0a0
+  hooks:
+    - id: ansible-lint
+      files: \.(yaml|yml)$
+- repo: https://github.com/jumanjihouse/pre-commit-hooks
+  sha: 1.11.0
+  hooks:
+    - id: markdownlint # Configure in .mdlrc
+      exclude: LICENSE.md
+    - id: shellcheck
