@@ -1,7 +1,9 @@
-# Vulnerable Instances :beetle: #
+# Vulnerable Instances 🐞 #
 
 ## About ##
-This project allows you to create intentionally-vulnerable virtual machines for testing purposes.
+
+This project allows you to create intentionally-vulnerable virtual
+machines for testing purposes.
 
 ## License ##
 
