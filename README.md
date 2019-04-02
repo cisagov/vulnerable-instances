@@ -11,11 +11,9 @@ machines for testing purposes.
   configured](
   https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
   on your system
-
 * [Terraform installed](
   https://learn.hashicorp.com/terraform/getting-started/install.html)
   on your system
-
 * Access to an Amazon Machine Image (AMI) that will be used for your
   vulnerable instance (if you don't have one, see below for instructions on how
   to create one)
