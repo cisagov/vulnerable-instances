@@ -37,7 +37,7 @@ and `tags` are correct in `packer/templates/aws/ubuntu_1404.json`.
 To build the AMI, run this command from the root directory of your clone of
 [cisagov/metasploitable3](https://github.com/cisagov/metasploitable3):
 
-```
+```bash
 packer build packer/templates/aws/ubuntu_1404.json
 ```
 
@@ -61,7 +61,7 @@ repository referenced above).
   `production.yml`), based on the variables listed in `terraform/variables.tf`.
   Here is a sample of what that file might look like:
 
-```
+```yaml
 aws_region = "us-east-1"
 
 aws_availability_zone = "a"
@@ -91,7 +91,7 @@ To create the environment containing the vulnerable instance(s), run the
 following terraform commands (replace `<your_workspace>` with a name like
 your username or "production"):
 
-```
+```bash
 cd terraform
 
 # If you have not created your terraform workspace:
@@ -109,7 +109,7 @@ terraform apply -var-file=<your_workspace>.yml
 To destroy the environment containing the vulnerable instance(s), run the
 following terraform commands:
 
-```
+```bash
 cd terraform
 terraform workspace select <your_workspace>
 terraform destroy -var-file=<your_workspace>.yml
