@@ -9,7 +9,7 @@ variable "aws_availability_zone" {
 }
 
 variable "tags" {
-  type        = "map"
+  type        = map(string)
   description = "Tags to apply to all AWS resources created"
   default     = {}
 }
@@ -17,13 +17,13 @@ variable "tags" {
 # This should be overridden by a production.tfvars file,
 # most likely stored outside of version control
 variable "trusted_ingress_networks_ipv4" {
-  type        = "list"
+  type        = list(string)
   description = "IPv4 CIDR blocks from which to allow ingress to the bastion server"
   default     = ["0.0.0.0/0"]
 }
 
 variable "trusted_ingress_networks_ipv6" {
-  type        = "list"
+  type        = list(string)
   description = "IPv6 CIDR blocks from which to allow ingress to the bastion server"
   default     = ["::/0"]
 }
