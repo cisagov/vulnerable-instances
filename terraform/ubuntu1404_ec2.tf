@@ -3,7 +3,7 @@ data "aws_ami" "metasploitable3_ubuntu1404" {
     name = "name"
 
     values = [
-      "metasploitable3-ubuntu-1404-hvm-*-x86_64-ebs",
+      "metasploitable3-ubuntu-1404",
     ]
   }
 
